@@ -1,0 +1,66 @@
+Scaffold(
+      body: Center(
+        child: Stack(
+
+          children: [
+            Container(
+              height: 250,
+              width: 150,
+              color: Colors.white,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 8.0,bottom: 4),
+                    child: Text('product',style: TextStyle(color: Colors.black),),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 8.0,bottom: 8),
+                    child: Text('\$34',style: TextStyle(color: Colors.red)
+                    ),
+                  ),],
+              ),
+            ),
+
+            ClipRRect(
+  borderRadius: BorderRadius.circular(10),
+
+
+
+
+               child: Image.asset('img/tobias-tullius-Fg15LdqpWrs-unsplash (1).jpg',
+                 height: 200,
+                 width: 150,
+
+               )),
+            Positioned(
+              top: 10,
+              left: 10,
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.yellow,
+                  borderRadius: BorderRadius.circular(10)
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text('50%'),
+                ),
+              ),
+            ),
+            Positioned(
+              bottom: 30,
+              right: 0,
+              child: Container(
+                decoration: BoxDecoration(
+                    color: Colors.white54,
+                    shape: BoxShape.circle,
+                    // borderRadius: BorderRadius.circular(10)
+                ),
+                child: IconButton(onPressed: (){}, icon: Icon(Icons.favorite_border)),
+              ),
+            )
+          ],
+        ),
+      ),
+    );
